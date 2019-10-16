@@ -1,0 +1,165 @@
+
+nav.mainmenu {
+  background: url('../images/menu/menu_bg.png') repeat-x;
+
+  @extend .no-padding;
+}
+
+ul.navbar-nav {
+  position: relative;
+  list-style: none;
+  clear: both;
+  float: left;
+  width: 100%;
+
+  .nav-item {
+    background: black;
+    opacity: 0.9;
+
+    a {
+      white-space: nowrap;
+      display: block;
+      position: relative;
+      text-decoration: none;
+      color: #FFF;
+      padding: 10px 20px 10px 20px;
+      text-shadow: 1px 1px 1px #000;
+      font-weight: normal;
+      float: left;
+      border: 0 !important;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $color-gold;
+        outline: 0;
+      }
+    }
+  }
+
+  li.backLava {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    background: url('../images/menu/menu_pointer.png') no-repeat center 0;
+    padding: 0;
+    height: 16px;
+    margin-top: 35px;
+  }
+}
+
+/*
+ * Non-mobile view
+ */
+@include media-breakpoint-up(lg) {
+  ul.navbar-nav {
+    margin: 15px 10px;
+    width: auto;
+
+    .nav-item {
+      background: none;
+
+      a {
+        padding: 10px 20px 2px 20px;
+      }
+    }
+
+    li.backLava {
+      display: block !important;
+    }
+  }
+}
+
+/*
+ * Navbar Toggle
+ */
+
+.hamburger-menu {
+  border: 0;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  font-size: 0;
+  text-indent: -9999px;
+  cursor: pointer;
+  z-index: 9999;
+  background: transparent;
+  margin: 15px 10px;
+}
+
+.hamburger-menu:focus {
+  outline: none;
+}
+
+.hamburger-menu span {
+  display: block;
+  position: absolute;
+  top: 17px;
+  left: 5px;
+  right: 5px;
+  height: 2px;
+  background: $color-gold;
+}
+
+.hamburger-menu span::before,
+.hamburger-menu span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: $color-gold;
+  content: "";
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+}
+
+.hamburger-menu span::before {
+  top: -7px;
+  transition-property: top, transform;
+}
+
+.hamburger-menu span::after {
+  bottom: -7px;
+  transition-property: bottom, transform;
+}
+
+.hamburger-menu.active span {
+  background: none;
+}
+
+.hamburger-menu.active span::before {
+  top: 0;
+  transform: rotate(225deg);
+}
+
+.hamburger-menu.active span::after {
+  bottom: 0;
+  transform: rotate(135deg);
+}
+
+.hamburger-menu.active span::before,
+.hamburger-menu.active span::after {
+  transition-delay: 0s, 0.3s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: rotate(0);
+  }
+
+  45% {
+    transform: rotate(15deg);
+  }
+
+  90% {
+    transform: rotate(-7deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}

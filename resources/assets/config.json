@@ -1,0 +1,23 @@
+{
+  "entry": {
+    "main": [
+      "./scripts/main.js",
+      "./styles/main.scss"
+    ],
+    "customizer": [
+      "./scripts/customizer.js"
+    ],
+    "pxs": [
+      "./scripts/pxs.js"
+    ]
+  },
+  "publicPath": "/wp-content/themes/LandbrugNaarChinaThemeSage9",
+  "devUrl": "http://landbrugnaarchina",
+  "proxyUrl": "http://localhost:3000",
+  "cacheBusting": "[name]_[hash:8]",
+  "watch": [
+    "app/**/*.php",
+    "config/**/*.php",
+    "resources/views/**/*.php"
+  ]
+}

@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+header {
+  width: 100vw;
+  display: block;
+  position: relative;
+}
+
+.slider-slick:not(.slick-initialized) .blog-slide-wrap:not(:first-child) {
+  display: none;
+}
+
+.header-overlay {
+  max-width: 960px;
+  margin: -45px 0;
+}
+
+.header-M {
+  margin: -58px -8px 0 -26px;
+  background-color: black;
+}
+
+/*
+
+@include media-breakpoint-up(xs) {
+  .header-slide {
+    margin: 2% 6% 0 4.2%;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .header-slide {
+    margin: 3% 6% 0 4.2%;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .header-slide {
+    margin: 2.5% 6% 0.5% 4.2%;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .header-slide {
+    margin: 2.7% 5.8% 0 4.8%;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .header-slide {
+    margin: 2.5% 4.1% 0 4.6%;
+  }
+}
+*/

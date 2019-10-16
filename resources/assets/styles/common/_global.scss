@@ -1,0 +1,85 @@
+/* ==========================================================================
+   Generic Tweaks
+   ========================================================================== */
+
+/* Interferce with the admin page */
+
+html,
+body.page,
+body.single {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+h2 {
+  color: $color-gold;
+  text-align: center;
+}
+
+.page-max-width {
+  max-width: 1440px;
+}
+
+/* ==========================================================================
+   Table styles
+   ========================================================================== */
+
+.table td,
+.table th {
+  border-top: 1px solid $color-gold;
+}
+
+/* ==========================================================================
+   hr styles
+   ========================================================================== */
+
+hr.style-seven {
+  overflow: visible; /* For IE */
+  height: 31px;
+  border: 0 solid $color-gold;
+  border-top-width: 1px;
+  border-radius: 20px;
+  margin-top: 2rem;
+}
+
+hr.style-seven ::before { /* Not really supposed to work, but does */
+  display: block;
+  content: "";
+  height: 31px;
+  margin-top: -31px;
+  border: 0 solid $color-gold;
+  border-bottom-width: 1px;
+  border-radius: 20px;
+}
+
+hr.style-eight {
+  overflow: visible; /* For IE */
+  padding: 0;
+  border: none;
+  border-top: medium double $color-gold;
+  color: $color-gold;
+  text-align: center;
+}
+
+hr.style-eight::after {
+  content: "国桥";
+  display: inline-block;
+  position: relative;
+  top: -0.8em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: black;
+}

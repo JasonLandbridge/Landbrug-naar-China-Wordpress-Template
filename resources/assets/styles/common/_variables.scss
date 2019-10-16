@@ -1,0 +1,20 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+$theme-colors: (
+  primary: #525DDC
+);
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+
+// Grid settings
+$main-sm-columns: 12;
+$sidebar-sm-columns: 4;
+
+$color-white: #FFF;
+$color-gold: #FFD700;
+$color-gold-min: FFD700;
+
+$color-red: #971006;

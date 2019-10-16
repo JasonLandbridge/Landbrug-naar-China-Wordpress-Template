@@ -1,0 +1,64 @@
+/* Content */
+
+.pxs_container {
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  //overflow-y: visible;
+  background: #7E0B11 url(../images/pxs/bg1.png) repeat-y center top;
+}
+
+.pxs_bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  .pxs_bg1 {
+    background-image: url(../images/pxs/bg2.png);
+  }
+
+  .pxs_bg2 {
+    background-image: url(../images/pxs/bg3.png);
+  }
+
+  .pxs_bg3 {
+    background-image: none;
+  }
+
+  div {
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    background-repeat: repeat;
+    background-position-x: center;
+    background-position-y: top;
+  }
+}
+
+.pxs_slider_wrapper {
+  position: relative;
+}
+
+ul.pxs_slider {
+  position: absolute;
+  overflow: visible;
+  //height: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    // right: 13px; Scrollbar fix
+    position: relative;
+  }
+}
+
+ul.pxs_slider > li {
+  float: left;
+  background: none;
+  padding: 0;
+}

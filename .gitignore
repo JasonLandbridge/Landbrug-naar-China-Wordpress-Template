@@ -17,3 +17,15 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 
+
+node_modules/
+
+.idea/
+
+.cache-loader/
+
+yarn.lock
+
+vendor/
+
+dist/

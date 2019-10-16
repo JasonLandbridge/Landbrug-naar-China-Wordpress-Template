@@ -29,3 +29,7 @@ yarn.lock
 vendor/
 
 dist/
+
+CHANGELOG.md
+
+CODE_OF_CONDUCT.md

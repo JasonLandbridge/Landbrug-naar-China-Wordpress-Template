@@ -275,12 +275,12 @@ jQuery(document).ready(function ($) {
                     $menu_items = $pxs_menu.children();
 
                 $pxs_slider.css({
-                    left: sk_px + "px",
+                    left: sk_px + 'px',
                 });
 
                 //first preload all the images
                 var loaded = 0,
-                    $pages = $(".pxs_slider").find('li.page-slide');
+                    $pages = $('.pxs_slider').find('li.page-slide');
 
                 $pages.each(function () {
                     var $img = $(this);
@@ -289,7 +289,6 @@ jQuery(document).ready(function ($) {
                         ++loaded;
 
                         if (loaded === $pages.length) {
-
                             /*
                             need to set width of the slider,
                             of each one of its elements, and of the
@@ -300,10 +299,11 @@ jQuery(document).ready(function ($) {
                             }
 
                             //make the first thumb be selected
-                            if (highlight) highlight($menu_items.eq(0));
+                            if (highlight) {
+                                highlight($menu_items.eq(0));
+                            }
 
-
-                            $(window).trigger("resize");
+                            $(window).trigger('resize');
                             $('.pxs_slider').css('visibility', 'visible');
 
                         }
@@ -343,25 +343,25 @@ jQuery(document).ready(function ($) {
 
         // $(".pxs_slider").css('overflow', 'visible');
 
-        $(".menu-item").each(function () {
-            var cl = $(this).attr("class");
+        $('.menu-item').each(function () {
+            var cl = $(this).attr('class');
             var matches = /menu-item-(\d+)/.exec(cl);
-            $(this).children("a").attr("id", "page_" + matches[1]);
+            $(this).children('a').attr('id', 'page_' + matches[1]);
         });
 
-        $(".page_item, .page-item, .current_page_item").each(function () {
-            var cl = $(this).attr("class");
+        $('.page_item, .page-item, .current_page_item').each(function () {
+            var cl = $(this).attr('class');
             var matches = /page-item-(\d+)/.exec(cl);
             if (!matches) {
                 return;
             }
-            var e = $(this).children("a");
-            if (!e.attr("id"))
-                e.attr("id", "page_" + matches[1]);
+            var e = $(this).children('a');
+            if (!e.attr('id'))
+                e.attr('id', 'page_' + matches[1]);
         });
 
-        $(".pxs_thumbnails > li:first > a").each(function () {
-            $(this).attr("id", "page_0");
+        $('.pxs_thumbnails > li:first > a').each(function () {
+            $(this).attr('id', 'page_0');
         });
 
     });
@@ -386,10 +386,10 @@ jQuery(document).ready(function ($) {
                     //Set slide index to go to
                     slide_index = window.location.hash.replace('#go_', '');
                     //Check if page exist
-                    const $page_slide = $("#for_" + slide_index);
+                    const $page_slide = $('#for_' + slide_index);
                     if ($page_slide.length) {
 
-                        var ind = $page_slide.attr("class");
+                        var ind = $page_slide.attr('class');
                         //Check if there is a match
                         var matches = /li_(\d+)/.exec(ind);
                         if (matches) {
@@ -412,13 +412,13 @@ jQuery(document).ready(function ($) {
                 auto: slider_auto,
                 slide: slide_index,
                 animDone: function () {
-                    $(".pxs_slider").show();
+                    $('.pxs_slider').show();
                 },
             });
 
 
             if (link) {
-                $("#" + link).trigger("click");
+                $('#' + link).trigger('click');
             }
 
         }
@@ -430,9 +430,9 @@ jQuery(document).ready(function ($) {
 
     function onResize() {
         //Set the sliders to the correct width based on the window
-        $(".pxs_slider > li").css({
+        $('.pxs_slider > li').css({
             //'overflow': 'hidden',
-            'width': $(window).width() + "px",
+            'width': $(window).width() + 'px',
         });
 
         /*
@@ -474,7 +474,7 @@ jQuery(document).ready(function ($) {
         let $index = $($menu_item).data('index');
 
         //Get url of link
-        let $url = $($menu_item).children("a:first").prop('href');
+        let $url = $($menu_item).children('a:first').prop('href');
 
         //Set the url with the new path
         window.history.pushState('', '', $url);

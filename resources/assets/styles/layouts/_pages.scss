@@ -225,6 +225,24 @@
   }
 }
 
+/*
+ * Contact Table
+ */
+
+table,
+th,
+td {
+  border: 1px solid $color-gold;
+}
+
+.contact-table {
+  overflow-wrap: break-word;
+}
+
+.google-map {
+  text-align: center;
+}
+
 @include media-breakpoint-up(md) {
   .event-table {
     .event-table-header {

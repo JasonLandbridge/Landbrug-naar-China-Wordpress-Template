@@ -27,6 +27,8 @@ ul.navbar-nav {
       font-weight: normal;
       float: left;
       border: 0 !important;
+      height: 70px;
+      line-height: 50px;
 
       &:hover,
       &:focus,
@@ -44,7 +46,8 @@ ul.navbar-nav {
     background: url('../images/menu/menu_pointer.png') no-repeat center 0;
     padding: 0;
     height: 16px;
-    margin-top: 35px;
+    margin-top: 50px;
+    pointer-events: none;
   }
 }
 
@@ -53,7 +56,6 @@ ul.navbar-nav {
  */
 @include media-breakpoint-up(lg) {
   ul.navbar-nav {
-    margin: 15px 10px;
     width: auto;
 
     .nav-item {

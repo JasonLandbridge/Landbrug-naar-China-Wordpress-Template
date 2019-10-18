@@ -1,6 +1,4 @@
 @import "common/variables";
-
-/** Import everything from autoload */
 @import "./autoload/**/*";
 
 /**
@@ -9,9 +7,13 @@
  * Prefix your imports with `~` to grab from node_modules/
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
+
 // @import "~some-node-module";
-@import "~slick-carousel/slick/slick.scss";
-@import "~slick-carousel/slick/slick-theme.scss";
+$slick-font-path: "~slick-carousel/slick/fonts/";
+$slick-loader-path: "~slick-carousel/slick/";
+
+@import '~slick-carousel/slick/slick';
+@import '~slick-carousel/slick/slick-theme';
 @import "~swiper/dist/css/swiper.min.css";
 
 /** Import theme styles */
